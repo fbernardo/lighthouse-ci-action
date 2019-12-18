@@ -56,6 +56,7 @@ function getArgs() {
     urls,
     staticDistDir,
     canUpload: getArg('temporaryPublicStorage') ? true : false,
+    githubAppToken: getArg('githubAppToken'),
     budgetPath: getArg('budgetPath'),
     numberOfRuns: getIntArg('runs'),
     serverBaseUrl,

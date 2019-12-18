@@ -82,6 +82,10 @@ async function main() {
       args.push('--target=temporary-public-storage')
     }
 
+    if (input.githubAppToken) {
+      args.push(`--githubAppToken=${input.githubAppToken}`)
+    }
+
     status = await runChildCommand('upload', args)
 
     if (status !== 0) {

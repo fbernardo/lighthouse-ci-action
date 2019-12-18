@@ -87,6 +87,16 @@ All results are private by default. Use this option to upload reports to LHCI's 
 temporaryPublicStorage: true
 ```
 
+#### `githubAppToken`
+
+The LHCI GitHub App token to use to apply a status check. You can find out more about `githubAppToken` in the [LHCI repo](https://github.com/GoogleChrome/lighthouse-ci/blob/master/docs/cli.md#upload).
+
+> **Note**: Use [Github secrets](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets#creating-encrypted-secrets) to keep your server address hidden!
+
+```yml
+githubAppToken: ${{ secrets.GITHUB_LHCI_APP_TOKEN }}
+```
+
 #### `runs` (default: 1)
 
 Specify the number of runs to do on each URL.
